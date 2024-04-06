@@ -1,0 +1,18 @@
+#button2 {
+    font-size: 1.25rem;
+    background-color: #0f75ae;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: none;
+    color: #fafbfc;
+}
+
+#text_typing {
+    background: #ff0066;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    padding: 10px;
+
+}
