@@ -4,10 +4,13 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import './mystyle.css'
 import './3.css'
+import './5.css'
 import { motion } from "framer-motion";
-import { useAnimate, stagger  } from "framer-motion";
+import { useAnimate, stagger } from "framer-motion";
 import { useEffect } from 'react'
-import {  useMotionValue, useTransform, animate } from "framer-motion";
+import { useMotionValue, useTransform, animate } from "framer-motion";
+import Card from "./Card.jsx";
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -61,6 +64,11 @@ function App() {
     });
   }, []);
 
+  // 5. Scroll Reveal Animations
+  const items5 = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+
+
+
 
   return (
     <>
@@ -98,7 +106,7 @@ function App() {
         </div>
         <hr />
 
-        <div  ref={scope}>
+        <div ref={scope}>
           <motion.button onClick={() => setOpen(!open)} whileTap={{ scale: 0.95 }}>
             Menu
           </motion.button>
@@ -111,6 +119,14 @@ function App() {
         <hr />
         <h4>4. Count Animation</h4>
         <motion.h1>{rounded}</motion.h1>;
+
+        <hr />
+        <h4>5. Scroll Reveal Animations</h4>
+        <div className="App">
+          {items5.map((item, i) => (
+            <Card key={i} text={item} index={i} />
+          ))}
+        </div>
 
       </div>
 
